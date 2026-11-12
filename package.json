@@ -1,0 +1,53 @@
+{
+  "name": "dsh-wuthering-waves-intro",
+  "version": "0.4.4",
+  "description": "v0.4.4 · DSH 鸣潮入场动画，20 个角色、4K 60帧静音素材、完整与快速开场",
+  "type": "module",
+  "license": "Apache-2.0",
+  "author": "kun111-web",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kun111-web/dsh-wuthering-waves-intro.git"
+  },
+  "homepage": "https://github.com/kun111-web/dsh-wuthering-waves-intro#readme",
+  "bugs": {
+    "url": "https://github.com/kun111-web/dsh-wuthering-waves-intro/issues"
+  },
+  "keywords": ["dsh-plugin", "deepseek-harness", "wuthering-waves", "intro", "animation"],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=24",
+    "dsh": ">=0.2.2-rc.1 <0.3.0-0"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./src/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "assets/characters",
+    "assets/SOURCE.json",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "split": "node scripts/split.mjs",
+    "clean:media": "node scripts/clean-media.mjs",
+    "trace": "python scripts/trace.py",
+    "pack:plugin": "node scripts/pack.mjs"
+  }
+}

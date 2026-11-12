@@ -1,0 +1,16 @@
+node_modules/
+.env
+.env.*
+*.log
+*.tmp
+*.download
+__pycache__/
+.DS_Store
+Thumbs.db
+output/
+qa/
+.playwright-cli/
+assets/*.mp4
+dist/*
+!dist/dsh-wuthering-waves-intro-0.4.4.tgz
+!dist/SHA256SUMS.txt

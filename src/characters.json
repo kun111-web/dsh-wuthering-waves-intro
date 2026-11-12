@@ -1,0 +1,22 @@
+[
+  { "id": "luuk-herssen", "name": "陆·赫斯", "start": 0, "end": 109 },
+  { "id": "zani", "name": "赞妮", "start": 109, "end": 253 },
+  { "id": "augusta", "name": "奥古斯塔", "start": 254, "end": 370 },
+  { "id": "galbrena", "name": "嘉贝莉娜", "start": 372, "end": 475 },
+  { "id": "phrolova", "name": "弗洛洛", "start": 475, "end": 638 },
+  { "id": "cartethyia", "name": "卡提希娅", "start": 638, "end": 754 },
+  { "id": "jinhsi", "name": "今汐", "start": 754, "end": 873 },
+  { "id": "changli", "name": "长离", "start": 873, "end": 932 },
+  { "id": "chisa", "name": "千咲", "start": 932, "end": 1120 },
+  { "id": "qiuyuan", "name": "仇远", "start": 1120, "end": 1267 },
+  { "id": "iuno", "name": "尤诺", "start": 1267, "end": 1458 },
+  { "id": "shorekeeper", "name": "守岸人", "start": 1458, "end": 1517 },
+  { "id": "lupa", "name": "露帕", "start": 1517, "end": 1563 },
+  { "id": "ciaccona", "name": "夏空", "start": 1563, "end": 1662 },
+  { "id": "jiyan", "name": "忌炎", "start": 1662, "end": 1707 },
+  { "id": "aemeath", "name": "爱弥斯", "start": 1707, "end": 1964 },
+  { "id": "mornye", "name": "莫宁", "start": 1964, "end": 2163 },
+  { "id": "lynae", "name": "琳奈", "start": 2163, "end": 2323 },
+  { "id": "yinlin", "name": "吟霖", "start": 2323, "end": 2560 },
+  { "id": "encore", "name": "安可", "start": 2560, "end": 2607 }
+]

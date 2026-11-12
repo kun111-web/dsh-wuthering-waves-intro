@@ -1,0 +1,21 @@
+{
+  "material": "鸣潮角色声痕动画",
+  "rights": "动画、角色形象及相关素材的权利归各权利人；不属于插件代码的 Apache-2.0 授权范围。",
+  "verified": "2026-11-12",
+  "sha256": "46f6f0e6b80ee59456996c6ee1ffe6d6854b6587094e1a3835323aec9ca1132b",
+  "source": {
+    "width": 3840,
+    "height": 2160,
+    "fps": 60,
+    "codec": "av1"
+  },
+  "clips": {
+    "width": 3840,
+    "height": 1488,
+    "fps": 60,
+    "codec": "h264",
+    "crop": "3840:1488:0:204"
+  },
+  "catalogTimebase": 30,
+  "note": "从 3840×2160、60 fps 素材裁出有效画面，未使用 AI 超分辨率；原始和中间视频不随插件发布。"
+}

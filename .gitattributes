@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.mp4 binary
+*.webp binary
+dist/*.tgz filter=lfs diff=lfs merge=lfs -text

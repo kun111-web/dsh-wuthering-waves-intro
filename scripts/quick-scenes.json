@@ -1,0 +1,22 @@
+{
+  "luuk-herssen": {"startFrame": 40, "endFrame": 100, "note": "金色横向光迹转蓝色声痕"},
+  "zani": {"startFrame": 65, "endFrame": 125, "note": "时钟轮廓到金色声痕"},
+  "augusta": {"startFrame": 25, "endFrame": 85, "note": "云层与剑阵，避开尾段过曝"},
+  "galbrena": {"startFrame": 25, "endFrame": 85, "note": "红色缎带与城堡到蓝色声痕"},
+  "phrolova": {"startFrame": 70, "endFrame": 130, "note": "红花聚拢到声痕显现"},
+  "cartethyia": {"startFrame": 38, "endFrame": 98, "note": "荆棘旋转到蓝色光痕"},
+  "jinhsi": {"startFrame": 20, "endFrame": 80, "note": "金色光丝与游龙，避开白色闪屏"},
+  "changli": {"startFrame": 6, "endFrame": 54, "note": "保留凤凰与金色声痕，去除尾部叠化"},
+  "chisa": {"startFrame": 95, "endFrame": 155, "note": "红线空间与最终声痕"},
+  "qiuyuan": {"startFrame": 60, "endFrame": 120, "note": "水墨圆形景深到黑白声痕"},
+  "iuno": {"startFrame": 95, "endFrame": 155, "note": "蓝色月光向声痕收束"},
+  "shorekeeper": {"startFrame": 7, "endFrame": 54, "note": "星轨展开与蓝色光蝶，去除尾部叠化"},
+  "lupa": {"startFrame": 5, "endFrame": 42, "note": "紫红光球展开，去除尾部叠化"},
+  "ciaccona": {"startFrame": 25, "endFrame": 85, "note": "金色弦线到绿色声痕"},
+  "jiyan": {"startFrame": 5, "endFrame": 41, "note": "青色龙卷与完整声痕"},
+  "aemeath": {"startFrame": 180, "endFrame": 240, "note": "像素城景汇聚为粉色心形声痕"},
+  "mornye": {"startFrame": 105, "endFrame": 165, "note": "星芒放射到紫色声痕"},
+  "lynae": {"startFrame": 75, "endFrame": 135, "note": "彩色公路与碎片声痕"},
+  "yinlin": {"startFrame": 140, "endFrame": 200, "note": "紫色晶体逐步聚拢，避开尾部闪屏"},
+  "encore": {"startFrame": 5, "endFrame": 45, "note": "人物剪影到粉色声痕"}
+}

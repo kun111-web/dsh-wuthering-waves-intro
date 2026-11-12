@@ -1,0 +1,34 @@
+{
+  "width": 3840,
+  "height": 1488,
+  "fps": 60,
+  "audio": false,
+  "files": {
+    "ciaccona": {
+      "sha256": "457a898f5a13b39184e06cdead7508be8767e6e442ec62998b1929cbc3363594",
+      "filters": [
+        "delogo=x=165:y=45:w=1510:h=115",
+        "delogo=x=165:y=150:w=670:h=120"
+      ]
+    },
+    "lupa": {
+      "sha256": "838d0b14b665c0f916fa6c552be2fb805766d665a778e4adca248a682009eed6",
+      "filters": [
+        "delogo=x=145:y=30:w=1550:h=250:enable='gte(t,1.25)'"
+      ]
+    },
+    "jiyan": {
+      "sha256": "5b08f8d7897be083679bd2e0c64ccf66591db6aad925e071d3862b111cf38937",
+      "filters": [
+        "delogo=x=145:y=30:w=1550:h=250:enable='lte(t,0.35)'"
+      ]
+    },
+    "mornye": {
+      "sha256": "8dd5a828e38964886e887ad2e6814dc33c68f249a6e0dfef4d870340bb690345",
+      "filters": [
+        "delogo=x=230:y=1220:w=250:h=245",
+        "delogo=x=2330:y=1285:w=370:h=80"
+      ]
+    }
+  }
+}
