@@ -2,7 +2,7 @@ window.__ModuleLoader__?.load?.({
   id: 'dsh-wuthering-waves-intro',
   factory: require => {
     const { createElement: h, useEffect, useRef, useState } = require('react');
-    const version = '0.4.5';
+    const version = '0.4.6';
 
     async function ensureRuntime(signal, ownedAssets) {
       if (window.__DSH_WUWA_INTRO__?.version === version) return;

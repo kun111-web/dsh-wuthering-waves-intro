@@ -64,8 +64,8 @@ try {
       repository: manifest.repository, homepage: manifest.homepage,
       publishConfig: manifest.publishConfig, files: ['characters', 'NOTICE.md', 'README.md']
     }, null, 2) + '\n');
-    await stagedWrite(join(dir, 'NOTICE.md'), '动画素材：鸣潮角色声痕动画。视频、角色形象及相关素材的权利归各权利人。本素材包不采用插件代码的 Apache-2.0 许可，不代表鸣潮、库洛或 DeepSeek 官方。\n');
-    await stagedWrite(join(dir, 'README.md'), `# ${group.package}\n\n动画素材：鸣潮角色声痕动画。由 dsh-wuthering-waves-intro 自动安装的正式素材依赖，无需在 DSH 中单独启用。包含 ${group.characters.length} 个 3840×1488、60 fps、无音轨的 H.264 视频。权利归属见 NOTICE.md。\n`);
+    await stagedWrite(join(dir, 'NOTICE.md'), '动画素材：鸣潮角色声痕动画。鸣潮相关素材归库洛游戏及相关权利人所有。本素材包中的视频、角色形象及相关素材不采用插件代码的 Apache-2.0 许可，不代表鸣潮、库洛游戏或 DeepSeek 官方。\n');
+    await stagedWrite(join(dir, 'README.md'), `# ${group.package}\n\n动画素材：鸣潮角色声痕动画。由 dsh-wuthering-waves-intro 自动安装的正式素材依赖，无需在 DSH 中单独启用。包含 ${group.characters.length} 个 3840×1488、60 fps、无音轨的 H.264 视频。\n\n鸣潮相关素材归库洛游戏及相关权利人所有。这些素材不属于插件代码的 Apache-2.0 授权范围，详见 NOTICE.md。\n`);
     for (const id of group.characters) {
       const destination = join(media, `${id}.mp4`); createdFiles.push(destination);
       // The staging directory stays on the source volume; hard links avoid duplicate video copies.

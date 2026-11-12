@@ -12,6 +12,6 @@ qa/
 .playwright-cli/
 assets/*.mp4
 dist/*
-!dist/*-0.4.5.tgz
+!dist/*-0.4.6.tgz
 !dist/SHA256SUMS.txt
 .pack-*/

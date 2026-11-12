@@ -1,7 +1,7 @@
 {
   "name": "dsh-wuthering-waves-intro",
-  "version": "0.4.5",
-  "description": "v0.4.5 · DSH 鸣潮入场动画，20 个角色、4K 60帧静音素材、完整与快速开场",
+  "version": "0.4.6",
+  "description": "v0.4.6 · DSH 鸣潮入场动画，20 个角色、4K 60帧静音素材、完整与快速开场",
   "type": "module",
   "license": "Apache-2.0",
   "author": "kun111-web",
@@ -57,11 +57,11 @@
     "pack:plugin": "node scripts/pack.mjs"
   },
   "dependencies": {
-    "@kun111-web/dsh-wuwa-media-1": "0.4.5",
-    "@kun111-web/dsh-wuwa-media-2": "0.4.5",
-    "@kun111-web/dsh-wuwa-media-3": "0.4.5",
-    "@kun111-web/dsh-wuwa-media-4": "0.4.5",
-    "@kun111-web/dsh-wuwa-media-5": "0.4.5",
-    "@kun111-web/dsh-wuwa-media-6": "0.4.5"
+    "@kun111-web/dsh-wuwa-media-1": "0.4.6",
+    "@kun111-web/dsh-wuwa-media-2": "0.4.6",
+    "@kun111-web/dsh-wuwa-media-3": "0.4.6",
+    "@kun111-web/dsh-wuwa-media-4": "0.4.6",
+    "@kun111-web/dsh-wuwa-media-5": "0.4.6",
+    "@kun111-web/dsh-wuwa-media-6": "0.4.6"
   }
 }

@@ -4,7 +4,7 @@
 
 ![守岸人动画预览](assets/characters/shorekeeper.webp)
 
-当前版本 **0.4.5**。DSH 版本声明为 **`>=0.2.2-rc.1 <0.3.0-0`**，需要 Node.js 24 或更新版本；DSH 桌面端使用自带运行时。已验证宿主为 **0.2.2-rc.1** 和 **0.2.2-rc.2**。范围内的未来版本仍需验证，0.3 及后续发行系列需重新适配。
+当前版本 **0.4.6**。DSH 版本声明为 **`>=0.2.2-rc.1 <0.3.0-0`**，需要 Node.js 24 或更新版本；DSH 桌面端使用自带运行时。已验证宿主为 **0.2.2-rc.1** 和 **0.2.2-rc.2**。范围内的未来版本仍需验证，0.3 及后续发行系列需重新适配。
 
 0.4.3 于 2026-11-12 完成兼容性验证：37 项自动回归通过；两个桌面版本各完成 20 个角色 × 完整/快速两种模式，共 80 次播放，均正常结束且释放 Blob，视频解码尺寸均为 3840×1488，150% 缩放下画布尺寸全部匹配设备像素比。每个桌面版本的 40 次播放累计记录到 8 帧丢帧。两个版本均验证了重启自动开场、刷新不重复播放和偏好保留；rc.1 另通过真实设置界面的角色选择核验。内置浏览器的正常注入、客户端补载及模拟媒体错误回退共 8 次播放通过，未记录到丢帧。版本范围的 9 个边界样例只验证声明解析，不代表未来宿主实测。0.4.4 整理公开发布信息、安装脚本和制作脚本，沿用同一套播放逻辑及 20 个角色素材。
 
@@ -23,19 +23,19 @@
 在 DSH 的「插件 → 添加插件」填写：
 
 ```text
-dsh-wuthering-waves-intro@0.4.5
+dsh-wuthering-waves-intro@0.4.6
 ```
 
 或者使用 CLI 安装到桌面配置：
 
 ```powershell
-dsh plugin --profile desktop add dsh-wuthering-waves-intro@0.4.5
+dsh plugin --profile desktop add dsh-wuthering-waves-intro@0.4.6
 ```
 
-也可从 [GitHub Releases](https://github.com/kun111-web/dsh-wuthering-waves-intro/releases/latest) 下载 `dsh-wuthering-waves-intro-0.4.5.tgz`，在「添加插件」中填写下载后的完整路径。主插件通过 6 个固定版本的 npm 素材依赖自动安装全部 20 个视频，首次安装需要联网，合计下载约 288 MiB。每个素材包约 46～50 MiB，无需在 DSH 中逐个添加。Release 同时保存主插件和 6 个素材包的发布归档。校验值见 Release 附件 `SHA256SUMS.txt`，可用 PowerShell 核对：
+也可从 [GitHub Releases](https://github.com/kun111-web/dsh-wuthering-waves-intro/releases/latest) 下载 `dsh-wuthering-waves-intro-0.4.6.tgz`，在「添加插件」中填写下载后的完整路径。主插件通过 6 个固定版本的 npm 素材依赖自动安装全部 20 个视频，首次安装需要联网，合计下载约 288 MiB。每个素材包约 46～50 MiB，无需在 DSH 中逐个添加。Release 同时保存主插件和 6 个素材包的发布归档。校验值见 Release 附件 `SHA256SUMS.txt`，可用 PowerShell 核对：
 
 ```powershell
-Get-FileHash 'C:\Downloads\dsh-wuthering-waves-intro-0.4.5.tgz' -Algorithm SHA256
+Get-FileHash 'C:\Downloads\dsh-wuthering-waves-intro-0.4.6.tgz' -Algorithm SHA256
 ```
 
 将示例路径替换为实际下载位置。安装后完全退出并重启 DSH，再到「设置 → 鸣潮入场动画」选择角色。卸载可在 DSH 插件列表操作。
@@ -48,9 +48,11 @@ Get-FileHash 'C:\Downloads\dsh-wuthering-waves-intro-0.4.5.tgz' -Algorithm SHA25
 
 ## 素材与许可
 
-动画素材：鸣潮角色声痕动画。代码采用 Apache-2.0；视频、角色形象及相关素材的权利归各权利人，详见 [NOTICE.md](NOTICE.md)。本项目为第三方插件。
+动画素材：鸣潮角色声痕动画。鸣潮相关素材归库洛游戏及相关权利人所有，包括本插件使用的视频、预览图、由画面提取的线稿及角色形象等。插件原创代码继续采用 Apache-2.0；上述素材不属于该代码许可证的授权范围，详见 [NOTICE.md](NOTICE.md)。本项目为第三方插件，不代表鸣潮、库洛游戏或 DeepSeek 官方。
 
 ## 片段与打包
+
+0.4.6 明确注明鸣潮相关素材归库洛游戏及相关权利人所有，统一主插件、6 个素材包及素材元数据的版权说明。插件原创代码继续采用 Apache-2.0，素材不属于代码许可证的授权范围。视频、预览图和线稿保持不变，不重新编码素材。
 
 0.4.5 将视频拆分为 6 个 npm 素材依赖，主包保留插件代码、线稿和预览图，解决完整包超过 npm 上传体积限制的问题。安装命令仍只需主插件包名。全部视频保持原始字节，不降低分辨率、帧率或码率；播放器从依赖包读取视频，源码目录保留本地素材回退。`src/media-packages.json` 记录唯一分组，`pack:plugin` 同时验证并输出 7 个版本化归档及 SHA-256，不执行安装后下载脚本。
 
