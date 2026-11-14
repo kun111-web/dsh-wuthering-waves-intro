@@ -5,7 +5,6 @@ import { createHash, randomUUID } from 'node:crypto';
 import manifest from '../package.json' with { type: 'json' };
 import characters from './characters.json' with { type: 'json' };
 import sketches from './sketches.json' with { type: 'json' };
-import { resolveMediaFile } from './media.js';
 
 export const name = 'dsh-wuthering-waves-intro';
 export const inject = ['webServer'];
@@ -84,7 +83,7 @@ export async function serveMedia(request) {
   }
   const type = clips.get(filename);
   if (!type) return new Response(null, { status: 404 });
-  const file = resolveMediaFile(filename);
+  const file = new URL(`../assets/characters/${filename}`, import.meta.url);
   let info;
   try { info = await stat(file); } catch { return new Response(null, { status: 404 }); }
   if (!info.isFile() || info.size === 0) return new Response(null, { status: 404 });
