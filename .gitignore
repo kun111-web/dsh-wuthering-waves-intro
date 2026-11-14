@@ -12,6 +12,6 @@ qa/
 .playwright-cli/
 assets/*.mp4
 dist/*
-!dist/dsh-wuthering-waves-intro-0.4.9.tgz
+!dist/dsh-wuthering-waves-intro-0.4.10.tgz
 !dist/SHA256SUMS.txt
 .pack-*/

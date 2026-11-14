@@ -4,7 +4,7 @@
 
 ![守岸人动画预览](assets/characters/shorekeeper.webp)
 
-当前版本 **0.4.9**。插件声明支持 DSH `>=0.2.2-rc.1 <0.3.0-0`。仓库安装和手动升级流程已在 DSH `0.2.2-rc.3` 验证。
+当前版本 **0.4.10**。插件声明支持 DSH `>=0.2.2-rc.1 <0.3.0-0`。仓库安装和手动升级流程已在 DSH `0.2.2-rc.3` 验证。
 
 ## 安装与升级
 
@@ -20,7 +20,7 @@ https://github.com/kun111-web/dsh-wuthering-waves-intro
 dsh plugin --profile desktop add 'https://github.com/kun111-web/dsh-wuthering-waves-intro'
 ```
 
-离线安装时，先下载约 288 MiB 的 `dsh-wuthering-waves-intro-0.4.9.tgz`，再把完整文件路径填入「添加插件」。安装包内含全部素材，校验值见同页的 `SHA256SUMS.txt`。[最新安装包](https://github.com/kun111-web/dsh-wuthering-waves-intro/releases/latest)
+离线安装时，先下载约 288 MiB 的 `dsh-wuthering-waves-intro-0.4.10.tgz`，再把完整文件路径填入「添加插件」。安装包内含全部素材，校验值见同页的 `SHA256SUMS.txt`。[最新安装包](https://github.com/kun111-web/dsh-wuthering-waves-intro/releases/latest)
 
 ## 使用
 
@@ -30,7 +30,9 @@ dsh plugin --profile desktop add 'https://github.com/kun111-web/dsh-wuthering-wa
 
 20 个 H.264 视频和预览图位于 `assets/characters/`，角色和片段信息见 `src/characters.json`。重新制作素材时，先用 FFmpeg 与 FFprobe 执行 `npm run split -- '<源视频完整路径>'`，再用配置了 OpenCV 和 NumPy 的 Python 环境执行 `npm run trace`。
 
-运行 `npm run pack:plugin` 生成版本化 `.tgz` 和 SHA-256 记录。打包检查版本、运行入口和全部素材。GitHub Releases 公开保留最新安装包，历史版本可通过 Git 标签查看。
+运行 `npm run pack:plugin` 生成版本化 `.tgz` 和 SHA-256 记录。打包检查版本、运行入口和全部素材。
+
+GitHub Releases 只保留最新版。新版发布并通过公开下载和 SHA-256 校验后，删除旧 Release，保留历史 Git 标签。具体步骤见 [发版规则](https://github.com/kun111-web/dsh-wuthering-waves-intro/blob/main/AGENTS.md)。
 
 ## 许可
 
