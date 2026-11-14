@@ -6,3 +6,4 @@ e78aad1c42ae79ecd3572ea0ee57ba0d69fef68bd0ad0005deeaac5bb7da47fd  kun111-web-dsh
 5113d821982c0c413af0682b79806c48202dde1ad7eab88216905a1b60e57048  kun111-web-dsh-wuwa-media-6-0.4.6.tgz
 5ddd317800bcff3724b63eff57df8d5d64f11b600a5c792dd721a5f19d2fa1fe  dsh-wuthering-waves-intro-0.4.6.tgz
 1468389a73382e952eb249c7fb8585e068c2655e5e1b1f2734155db8a0b4d871  dsh-wuthering-waves-intro-0.4.7.tgz
+41abd5ffa597513cc15634f84c555209dc37a8b6ac48ce03cea7cab92abd59ea  dsh-wuthering-waves-intro-0.4.8.tgz

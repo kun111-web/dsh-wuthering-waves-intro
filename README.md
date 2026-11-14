@@ -4,7 +4,7 @@
 
 ![守岸人动画预览](assets/characters/shorekeeper.webp)
 
-当前版本 **0.4.7**。DSH 版本声明为 **`>=0.2.2-rc.1 <0.3.0-0`**，需要 Node.js 24 或更新版本；DSH 桌面端使用自带运行时。0.4.7 在 **0.2.2-rc.3** 验证安装和媒体读取，历史播放回归见下文。
+当前版本 **0.4.8**。DSH 版本声明为 **`>=0.2.2-rc.1 <0.3.0-0`**，需要 Node.js 24 或更新版本。DSH 桌面端使用自带运行时。历史播放回归见下文。
 
 0.4.3 于 2026-11-12 完成兼容性验证：37 项自动回归通过；两个桌面版本各完成 20 个角色 × 完整/快速两种模式，共 80 次播放，均正常结束且释放 Blob，视频解码尺寸均为 3840×1488，150% 缩放下画布尺寸全部匹配设备像素比。每个桌面版本的 40 次播放累计记录到 8 帧丢帧。两个版本均验证了重启自动开场、刷新不重复播放和偏好保留；rc.1 另通过真实设置界面的角色选择核验。内置浏览器的正常注入、客户端补载及模拟媒体错误回退共 8 次播放通过，未记录到丢帧。版本范围的 9 个边界样例只验证声明解析，不代表未来宿主实测。0.4.4 整理公开发布信息、安装脚本和制作脚本，沿用同一套播放逻辑及 20 个角色素材。
 
@@ -20,27 +20,45 @@
 
 ## 安装
 
-从 [GitHub Release 0.4.7](https://github.com/kun111-web/dsh-wuthering-waves-intro/releases/tag/dsh-wuthering-waves-intro-v0.4.7) 下载 `dsh-wuthering-waves-intro-0.4.7.tgz`，在 DSH 的「插件 → 添加插件」顶部填写下载后的完整路径，也可直接粘贴以下下载地址：
+### 使用固定仓库地址
+
+在 DSH「插件 → 添加插件」的顶部输入框粘贴以下仓库地址，安装完成后启用插件。
 
 ```text
-https://github.com/kun111-web/dsh-wuthering-waves-intro/releases/download/dsh-wuthering-waves-intro-v0.4.7/dsh-wuthering-waves-intro-0.4.7.tgz
+https://github.com/kun111-web/dsh-wuthering-waves-intro
+```
+
+DSH 从默认分支 `main` 的当前提交安装，仓库内已包含全部 20 个角色的视频和预览图。安装后会锁定该提交。升级时，从托盘完全退出 Windows 版 DSH，再用桌面端提供的 `dsh` 命令重新安装同一个地址。打开 DSH 后可在插件详情核对版本。
+
+```powershell
+dsh plugin --profile desktop add 'https://github.com/kun111-web/dsh-wuthering-waves-intro'
+```
+
+### 使用 Release 安装包
+
+在「添加插件」顶部填写 `.tgz` 的完整本地路径，或粘贴附件下载地址。需要离线安装时，可提前下载。[最新 GitHub Release](https://github.com/kun111-web/dsh-wuthering-waves-intro/releases/latest)
+
+```text
+https://github.com/kun111-web/dsh-wuthering-waves-intro/releases/download/dsh-wuthering-waves-intro-v0.4.8/dsh-wuthering-waves-intro-0.4.8.tgz
 ```
 
 或者使用 CLI 安装到桌面配置：
 
 ```powershell
-dsh plugin --profile desktop add 'C:\Downloads\dsh-wuthering-waves-intro-0.4.7.tgz'
+dsh plugin --profile desktop add 'C:\Downloads\dsh-wuthering-waves-intro-0.4.8.tgz'
 ```
 
 安装包约 289 MiB，内含全部 20 个视频和预览图，可以下载后离线安装。校验值见 Release 附件 `SHA256SUMS.txt`，可用 PowerShell 核对：
 
 ```powershell
-Get-FileHash 'C:\Downloads\dsh-wuthering-waves-intro-0.4.7.tgz' -Algorithm SHA256
+Get-FileHash 'C:\Downloads\dsh-wuthering-waves-intro-0.4.8.tgz' -Algorithm SHA256
 ```
 
 将示例路径替换为实际下载位置。安装后完全退出并重启 DSH，再到「设置 → 鸣潮入场动画」选择角色。卸载可在 DSH 插件列表操作。
 
-从源码安装时，先运行 `npm run pack:plugin` 生成完整安装包，再运行 `./install.ps1`。脚本从 PATH 查找 `dsh`；若未配置 PATH，使用 `./install.ps1 -DshCommand '<DSH CLI 完整路径>'`。脚本从本项目 `dist/` 的版本化安装包安装，并核对桌面配置中的依赖来源及版本。
+### 本地开发
+
+从本地源码验证时，先运行 `npm run pack:plugin` 生成安装包，再运行 `./install.ps1`。脚本从 PATH 查找 `dsh`，也可使用 `./install.ps1 -DshCommand '<DSH CLI 完整路径>'`。脚本从本项目 `dist/` 安装并核对依赖来源及版本。公开安装包统一发到本仓库的 GitHub Releases。
 
 ## 数据与权限
 
@@ -51,6 +69,8 @@ Get-FileHash 'C:\Downloads\dsh-wuthering-waves-intro-0.4.7.tgz' -Algorithm SHA25
 动画素材：鸣潮角色声痕动画。鸣潮相关素材归库洛游戏及相关权利人所有，包括本插件使用的视频、预览图、由画面提取的线稿及角色形象等。插件原创代码继续采用 Apache-2.0；上述素材不属于该代码许可证的授权范围，详见 [NOTICE.md](NOTICE.md)。本项目为第三方插件，不代表鸣潮、库洛游戏或 DeepSeek 官方。
 
 ## 片段与打包
+
+0.4.8 在独立仓库补齐固定安装地址和手动升级流程。播放逻辑和素材沿用 0.4.7。仓库安装和固定地址升级已在 DSH 0.2.2-rc.3 验证。
 
 0.4.7 改为通过 GitHub Release 分发单个完整安装包。20 个视频和预览图直接打包进插件，保持原始字节，安装无需拉取素材依赖。
 
